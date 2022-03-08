@@ -4,12 +4,9 @@ class Solution:
         maximum = 2 ** 31 - 1
         
         if x > maximum:
-            print(">")
             return maximum
         if x < minimum:
-            print("<")
             return minimum
-        print("x", x)
         return x
     
     def myAtoi(self, s: str) -> int:
