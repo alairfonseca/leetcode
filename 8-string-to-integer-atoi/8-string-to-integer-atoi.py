@@ -13,12 +13,13 @@ class Solution:
         return x
     
     def myAtoi(self, s: str) -> int:
-        result = 0
         s = s.lstrip()
-        symbol = 1
         
         if not s:
             return 0
+        
+        result = 0
+        symbol = 1
         
         if s[0] == "-" or s[0] == "+":
             if s[0] == "-":
@@ -27,11 +28,9 @@ class Solution:
             s = s[1:]
         
         for ch in s:
-            print(ch)
             if not ch.isdigit():
                 break;
             
             result = (result * 10) + int(ch)
-            print(result)
         
         return self.clamp(result * symbol)
